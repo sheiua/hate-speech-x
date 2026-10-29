@@ -1,0 +1,81 @@
+{
+  "config_terbaik": {
+    "segment_mode": "sentence",
+    "w_hidden": 64,
+    "s_hidden": 64,
+    "dropout": 0.3,
+    "lr": 0.002,
+    "batch_size": 64,
+    "pos_weight_pow": 0.75,
+    "focal_gamma": 0.0,
+    "aug_ratio": 0.0,
+    "emb_trainable": false,
+    "arch": "han"
+  },
+  "n_seeds": 3,
+  "threshold": {
+    "HS_Individual": 0.4700000000000001,
+    "HS_Group": 0.6400000000000001,
+    "HS_Physical": 0.7900000000000001,
+    "HS_Religion": 0.7300000000000002
+  },
+  "consistency_mode": "none",
+  "pretrained_embedding": true,
+  "test_per_label": {
+    "HS_Individual": {
+      "precision": 0.62,
+      "recall": 0.748,
+      "f1": 0.678,
+      "support": 519,
+      "pr_auc": 0.735,
+      "threshold": 0.47,
+      "lolos_target": true
+    },
+    "HS_Group": {
+      "precision": 0.646,
+      "recall": 0.618,
+      "f1": 0.632,
+      "support": 293,
+      "pr_auc": 0.682,
+      "threshold": 0.64,
+      "lolos_target": true
+    },
+    "HS_Physical": {
+      "precision": 0.548,
+      "recall": 0.5,
+      "f1": 0.523,
+      "support": 46,
+      "pr_auc": 0.524,
+      "threshold": 0.79,
+      "lolos_target": false
+    },
+    "HS_Religion": {
+      "precision": 0.645,
+      "recall": 0.767,
+      "f1": 0.701,
+      "support": 116,
+      "pr_auc": 0.717,
+      "threshold": 0.73,
+      "lolos_target": true
+    }
+  },
+  "test_metrics": {
+    "instance_f1": 0.7549254249046132,
+    "instance_accuracy": 0.745143947277142,
+    "subset_accuracy": 0.7159209157127991,
+    "micro_f1": 0.6611650485436893,
+    "macro_f1": 0.6332516461622646,
+    "hamming_loss": 0.09079084287200832
+  },
+  "test_metrics_hanya_berlabel": {
+    "instance_f1": 0.6748357963875206,
+    "instance_accuracy": 0.6516830870279147,
+    "subset_accuracy": 0.5825123152709359,
+    "micro_f1": 0.7463013698630137,
+    "macro_f1": 0.7182651628953604,
+    "hamming_loss": 0.14254926108374386
+  },
+  "cv": null,
+  "ablation": null,
+  "pencarian": null
+}
